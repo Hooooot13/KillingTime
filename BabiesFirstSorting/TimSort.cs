@@ -34,19 +34,7 @@ namespace BabiesFirstSorting
             }
             junk.arrayPrinter(array);
 
-            int[] arrayB = new int[array.Length];
-
-            for (int j = Run; j < array.Length - remainder; j += Run)
-            {
-                mergeSort.BottomUpMerge(array, 0, j, j+Run, arrayB);
-            }
-            if (remainder > 0)
-            {
-                mergeSort.BottomUpMerge(array, 0, array.Length - remainder, array.Length, arrayB);
-            }
-            junk.arrayPrinter(arrayB);
-
-            arrayB.CopyTo(array, 0);
+            //TODO: Merge Runs
 
         }
     }
